@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "name": "BlueWave Swimming Pool Grating",
+      "category": "Swimming Pool Accessories",
+      "price": 24.99
+    },
+    {
+      "id": 2,
+      "name": "AquaGlow LED Pool Light",
+      "category": "Swimming Pool Accessories",
+      "price": 89.99
+    },
+    {
+      "id": 3,
+      "name": "SunLounge Deluxe Pool Lounger",
+      "category": "Swimming Pool Accessories",
+      "price": 149.95
+    },
+    {
+      "id": 4,
+      "name": "CrystalTile Pool Tiles (Pack of 10)",
+      "category": "Swimming Pool Accessories",
+      "price": 34.50
+    },
+    {
+      "id": 5,
+      "name": "PoolMaster Water Testing Kit",
+      "category": "Pool Maintenance and Equipment",
+      "price": 29.99
+    },
+    {
+      "id": 6,
+      "name": "PoolHeat Pro Swimming Pool Heat Pump",
+      "category": "Pool Equipment and Heating Systems",
+      "price": 899.00
+    },
+    {
+      "id": 7,
+      "name": "HydroChill Pool Cooler",
+      "category": "Pool Equipment and Heating Systems",
+      "price": 549.95
+    },
+    {
+      "id": 8,
+      "name": "TitaniumTech Pool Heater",
+      "category": "Pool Equipment and Heating Systems",
+      "price": 679.99
+    },
+    {
+      "id": 9,
+      "name": "UltraFloat Pool Noodle (Pack of 3)",
+      "category": "Swimming Pool Accessories",
+      "price": 16.50
+    },
+    {
+      "id": 10,
+      "name": "ClearView Pool Goggles",
+      "category": "Swimming Pool Accessories",
+      "price": 12.99
+    },
+    {
+      "id": 11,
+      "name": "DolphinWave Robotic Pool Cleaner",
+      "category": "Pool Maintenance and Equipment",
+      "price": 589.00
+    },
+    {
+      "id": 12,
+      "name": "EcoWave Variable Speed Pool Pump",
+      "category": "Pool Equipment and Heating Systems",
+      "price": 399.00
+    },
+    {
+      "id": 13,
+      "name": "FloatEase Pool Water pH Increaser",
+      "category": "Pool Maintenance and Equipment",
+      "price": 8.99
+    },
+    {
+      "id": 14,
+      "name": "HydroJet Massage Pool System",
+      "category": "Pool Equipment and Heating Systems",
+      "price": 349.95
+    },
+    {
+      "id": 15,
+      "name": "SunnySide Pool Umbrella",
+      "category": "Swimming Pool Accessories",
+      "price": 79.99
+    },
+    {
+      "id": 16,
+      "name": "AquaFlex Pool Tiles (Pack of 12)",
+      "category": "Swimming Pool Accessories",
+      "price": 42.75
+    },
+    {
+      "id": 17,
+      "name": "SwimGuard Pool Safety Alarm",
+      "category": "Pool Maintenance and Equipment",
+      "price": 54.50
+    },
+    {
+      "id": 18,
+      "name": "ThermoFusion Solar Pool Heater",
+      "category": "Pool Equipment and Heating Systems",
+      "price": 299.00
+    },
+    {
+      "id": 19,
+      "name": "AquaSlide Water Slide",
+      "category": "Swimming Pool Accessories",
+      "price": 199.95
+    },
+    {
+      "id": 20,
+      "name": "UltimateClean Pool Skimmer",
+      "category": "Pool Maintenance and Equipment",
+      "price": 22.99
+    }
+  ]
+  

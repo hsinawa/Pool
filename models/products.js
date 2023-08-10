@@ -5,14 +5,16 @@ const quotesSchema = mongoose.Schema(
     name: {
       type: String,
       require: [true, "Name is required"],
+
     },
     comment: {
       type: String,
       require: [true, "Tell us what you want to know"],
     },
-    rating: {
+    contact: {
       type: Number,
       require: [true, "Enter Your Contact Number"],
+     
     },
   },
   {
@@ -35,9 +37,9 @@ const ProductSchema = mongoose.Schema(
       default: "WADBROS INDIA",
       require: [true, "Image is required"],
     },
-    category: {
+    type: {
       type: String,
-      require: [true, "Category is required"],
+      require: [true, "Type is required"],
     },
     description: {
       type: String,
@@ -52,10 +54,10 @@ const ProductSchema = mongoose.Schema(
         type: String,
         require: [true, "Write a small detail"],
     } ,
-    subCategory:[{
+    Category:{
         type: String,
-        require: [true, "Write a small detail"],
-    } ]
+        require: [true, "Write Category"],
+    } 
     ,
    
    

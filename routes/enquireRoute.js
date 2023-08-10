@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
-const ProductSchema = require('../models/products')
+const EnquireSchema = require('../models/contactModel')
 
 module.exports = router;

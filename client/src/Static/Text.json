@@ -3,8 +3,51 @@
   "AboutSection": [
     "Established in 2016, We Wadbros India is a well known Manufacture of Swimming Pools, Swimming Pool Filter, Swimming Pool Pump and much more. All these products are quality assured by the executive to ensure perfect qualities and longer life. Highly demanded, these products are accessible from the market in different sizes and designs. We are also provoding the Swimming Pool Services to our customers.",
     "With the leadership and extreme knowledge of Mr. Varinder Wadhawan we are maintaining our topmost position in the global market."
-  ] ,
-  "knowMore":"Know More",
-  "SearchByType":"Know What You are Looking for?",
-  "SearchByTypeSub":"Search By Type"
+  ],
+  "knowMore": "Know More",
+  "SearchByType": "Know What You are Looking for?",
+  "SearchByTypeSub": "Search By Type",
+  "AboutPage": {
+    "CompanyFactSheet": {
+      "name": "Company Factsheet",
+      "basicinfo": {
+        "name": "Basic Information",
+        "nature": ["Nature of Business", "Exporter and Manufacturer"],
+        "AdditionalBusiness": [
+          "Additional Business",
+          "Service Provider",
+          "Importer",
+          "Supplier",
+          "Distributor",
+          "Trader",
+          "Retailer"
+        ],
+        "CEO": ["Company CEO", "Varinder Wadhawan"],
+        "address": [
+          "Registered Address",
+          "No.77- C, Pocket-A, SFS Flats, Mayur Vihar-III,, Delhi- 110096, Delhi, India"
+        ],
+        "employees": ["Total Number of Employees", "Upto 10 People"],
+        "established": ["Year of Establishment", "2016"],
+        "legal": ["Legal Status of Firm", "Individual - Proprietor"],
+        "turnover": ["Annual Turnover", "₹ 1 - 2 Crore"]
+      },
+
+      "statuory": {
+        "name": "Statutory Profile",
+        "import": ["Import Export Code (IEC)", "05169*****"],
+        "Banker": ["Banker", "DCB Bank Limited"],
+        "GST": ["GST No.", "07AAAPW7189A2ZI"]
+      },
+      "packaging":{
+          "name":"Packaging/Payment and Shipment Details",
+          "payments":["Payment Mode","Cash","Credit Card","Bank Transfer","Cheque","Online"],
+          "shipment":["Shipment Mode","By Road"]
+      },
+      "OurTeam":{
+          "name":"Our Team",
+          "description":"Our team works in close coordination with our clients to deliver quality products as per their specifications. Our team comprises skilled, dynamic, dedicated, experienced and hardworking personnel. They work in close coordination with each other and regularly attain skill oriented sessions and workshops for the best utilization of available resources. We have gained a commendable position in this domain due to the commitment of our teammates towards maintaining the quality of the products."
+      }
+    }
+  }
 }

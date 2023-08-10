@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import {  useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import './navStyle.css'
 import poolItemsData from './fake.json'
+import logo from '../Static/wadbros.jpg'
 function Navbar() {
 	const navRef = useRef();
   
@@ -32,7 +33,13 @@ function Navbar() {
 
 	return (
 		<header>
-			<h3>LOGO</h3>
+			<h3> <a href='/'> <img
+                  src={logo}
+                  alt="logo-image"
+                  style={{
+                    width: "70px",
+                  }}
+                /> </a> </h3>
 			<nav ref={navRef} id='nav-styles' >
 				<a href="/about">About Us</a>
 				<a href="/products">Our Products</a>

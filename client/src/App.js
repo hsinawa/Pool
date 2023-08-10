@@ -1,26 +1,22 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homescreen from "./screens/homepage";
 import Navbar from "./Headers/Navbar";
+import AboutUs from "./screens/AboutUsPage";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Homescreen />,
-    children: [
-      {
-        path: "Homescreen",
-        element: <Homescreen />,
-      },
-    ],
-  },
-]);
+
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <RouterProvider router={router} />
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homescreen />} ></Route>
+        <Route path="/about" element={<AboutUs />} ></Route>
+      </Routes>
+      </BrowserRouter>
+    
     </div>
   );
 }

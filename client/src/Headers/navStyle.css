@@ -24,6 +24,11 @@ header {
 	color: var(--textColor);
 }
 
+#nav-styles
+{
+	margin-left: 20%;
+	z-index: 2;
+}
 nav a {
 	margin: 0 1rem;
 	color: var(--textColor);
@@ -109,6 +114,11 @@ nav {
 		visibility: visible;
 		opacity: 1;
 	}
+
+	#nav-styles
+{
+	margin-left: 0px;
+}
 
 	header nav {
 		position: fixed;

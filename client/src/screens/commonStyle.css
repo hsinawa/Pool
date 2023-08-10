@@ -6,3 +6,47 @@
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+
+
+
+.images-1
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+    height: 300px;
+  
+}
+
+#carousel-image
+{
+    height: 500px;
+}
+
+@media screen and (max-width:900px) {
+    
+}
+
+@media screen and (max-width:600px) {
+    #carousel-image
+{
+    height: 300px;
+}
+
+.images-1
+{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+    height: 150px;
+  
+}
+
+}
+
+
+@media screen and (max-width:450px) {
+    
+}

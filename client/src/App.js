@@ -1,12 +1,7 @@
-
-import './App.css';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
-import Homescreen from './screens/homepage';
-import Navbar from './Headers/Navbar';
-
+import "./App.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Homescreen from "./screens/homepage";
+import Navbar from "./Headers/Navbar";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +11,7 @@ const router = createBrowserRouter([
       {
         path: "Homescreen",
         element: <Homescreen />,
-      }
+      },
     ],
   },
 ]);
@@ -25,10 +20,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-    <RouterProvider
-    router={router}
-    
-  />
+      <RouterProvider router={router} />
     </div>
   );
 }

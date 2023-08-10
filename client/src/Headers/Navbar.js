@@ -28,29 +28,12 @@ function Navbar() {
     fetchSuggestions(); // Call the fetchSuggestions function on input change
   };
     
-  const [isMobile, setIsMobile] = useState(false)
- 
-//choose the screen size 
-const handleResize = () => {
-  if (window.innerWidth < 720) {
-      setIsMobile(true)
-  } else {
-      setIsMobile(false)
-  }
-}
-
-// create an event listener
-useEffect(() => {
-  window.addEventListener("resize", handleResize)
-})
 
 
 	return (
 		<header>
 			<h3>LOGO</h3>
-			<nav ref={navRef} style={{
-        marginLeft:isMobile?'0px':'30%'
-      }} >
+			<nav ref={navRef} id='nav-styles' >
 				<a href="/about">About Us</a>
 				<a href="/products">Our Products</a>
 				<a href="/contact">Contact Us</a>

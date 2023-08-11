@@ -5,7 +5,6 @@ const quotesSchema = mongoose.Schema(
     name: {
       type: String,
       require: [true, "Name is required"],
-
     },
     comment: {
       type: String,
@@ -14,7 +13,6 @@ const quotesSchema = mongoose.Schema(
     contact: {
       type: Number,
       require: [true, "Enter Your Contact Number"],
-     
     },
   },
   {
@@ -50,17 +48,20 @@ const ProductSchema = mongoose.Schema(
       require: [true, "Price is required"],
     },
 
-    details:{
+    details: [{
+      key: {
         type: String,
-        require: [true, "Write a small detail"],
-    } ,
-    Category:{
+        require: [true, "Write a Key"],
+      },
+      value: {
         type: String,
-        require: [true, "Write Category"],
-    } 
-    ,
-   
-   
+        require: [true, "Write a Value"],
+      },
+    }],
+    Category: {
+      type: String,
+      require: [true, "Write Category"],
+    },
     quotes: [quotesSchema],
   },
 

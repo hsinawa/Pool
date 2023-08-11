@@ -39,7 +39,7 @@ const ProductSchema = mongoose.Schema(
       type: String,
       require: [true, "Type is required"],
     },
-    description: {
+   details : {
       type: String,
       require: true,
     },
@@ -48,7 +48,7 @@ const ProductSchema = mongoose.Schema(
       require: [true, "Price is required"],
     },
 
-    details: [{
+    description: [{
       key: {
         type: String,
         require: [true, "Write a Key"],

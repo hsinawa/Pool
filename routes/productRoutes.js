@@ -2,9 +2,8 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const ProductSchema = require("../models/products");
-router.post("/addproduct", async (req, res) => {
 
-  console.log('Here')
+router.post("/addproduct", async (req, res) => {
   try {
     const docs = await ProductSchema.find({});
 
@@ -17,12 +16,11 @@ router.post("/addproduct", async (req, res) => {
       details: req.body.details,
       category: req.body.category,
     });
-   
+
     await product.save();
-    console.log('Added')
+
     res.send({ message: "Product Added Successfully" });
   } catch (err) {
-    console.log('Gone')
     res.status(400).json({ message: `Something Went Wrong ${err} ` });
   }
 });

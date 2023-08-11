@@ -1,0 +1,21 @@
+import axios from "axios";
+
+const Enq_Req = "Enq_Req";
+const Enq_Suc = "Enq_Suc";
+const Enq_Fail = "Enq_Fail";
+const Enq_API = "/api/enquiry";
+export const enquiryContactAction = (data) => (dispatch) => {
+   
+  dispatch({ type: Enq_Req });
+  axios
+    .post(`${Enq_API}/postEnq`, data)
+    .then((res) => {
+      dispatch({ type: Enq_Suc });
+      window.location.href = "/success";
+    })
+    .catch((err) => {
+      dispatch({ type: Enq_Fail, payload: err });
+      
+      window.location.href = "/error";
+    });
+};

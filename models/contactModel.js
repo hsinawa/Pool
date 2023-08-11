@@ -15,7 +15,7 @@ const EnquireSchema = mongoose.Schema({
         require: [true, "Enter Your Contact Number"],
        
       }
-})
+},{timestamps:true})
 
 
 const Enquire = mongoose.model("Enquire", EnquireSchema);

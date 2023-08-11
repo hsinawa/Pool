@@ -1,7 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import textData from "../Static/Text.json";
 import logo from "../Static/wadbros.jpg";
 
@@ -482,6 +481,9 @@ const AboutUs = () => {
           </Grid>
         </Box>
       </section>
+
+
+      <br/><br/>
     </div>
   );
 };

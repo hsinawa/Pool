@@ -39,15 +39,41 @@
         "Banker": ["Banker", "DCB Bank Limited"],
         "GST": ["GST No.", "07AAAPW7189A2ZI"]
       },
-      "packaging":{
-          "name":"Packaging/Payment and Shipment Details",
-          "payments":["Payment Mode","Cash","Credit Card","Bank Transfer","Cheque","Online"],
-          "shipment":["Shipment Mode","By Road"]
+      "packaging": {
+        "name": "Packaging/Payment and Shipment Details",
+        "payments": [
+          "Payment Mode",
+          "Cash",
+          "Credit Card",
+          "Bank Transfer",
+          "Cheque",
+          "Online"
+        ],
+        "shipment": ["Shipment Mode", "By Road"]
       },
-      "OurTeam":{
-          "name":"Our Team",
-          "description":"Our team works in close coordination with our clients to deliver quality products as per their specifications. Our team comprises skilled, dynamic, dedicated, experienced and hardworking personnel. They work in close coordination with each other and regularly attain skill oriented sessions and workshops for the best utilization of available resources. We have gained a commendable position in this domain due to the commitment of our teammates towards maintaining the quality of the products."
+      "OurTeam": {
+        "name": "Our Team",
+        "description": "Our team works in close coordination with our clients to deliver quality products as per their specifications. Our team comprises skilled, dynamic, dedicated, experienced and hardworking personnel. They work in close coordination with each other and regularly attain skill oriented sessions and workshops for the best utilization of available resources. We have gained a commendable position in this domain due to the commitment of our teammates towards maintaining the quality of the products."
       }
     }
+  },
+
+  "WhyUSPage": {
+    "name": "Why Choose Us?",
+    "description": "In order to maintain the reputation we have developed over the years, we are involved in providing supreme grade products to our patrons.",
+    "values": [
+     "Exceptional Quality and Service",
+      "Flexible payment modes",
+      "On time delivery",
+      "Huge distribution network",
+      "Ethical business strategies",
+      "Clarity in deals"
+    ]
+  } ,
+
+  "contactPage":{
+      "name":"Contact Us",
+      "description":"Tell Us What Are You Looking For ?"
+
   }
 }

@@ -9,6 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import image_pool from "../Static/pool.jpeg";
 import textData from "../Static/Text.json";
 import CompSearchByTypeonent from "./SearchByType";
+import WhyUS from "./WhyUS";
+import ContactUs from "./contactUs";
 
 const Homescreen = () => {
 
@@ -90,6 +92,8 @@ const Homescreen = () => {
       </Box>
 
       <CompSearchByTypeonent />
+      <WhyUS />
+      <ContactUs />
     </div>
   );
 };

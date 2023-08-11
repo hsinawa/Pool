@@ -35,7 +35,7 @@ const ProductSchema = mongoose.Schema(
     brand: {
       type: String,
       default: "WADBROS INDIA",
-      require: [true, "Image is required"],
+      require: [true, "Brand is required"],
     },
     type: {
       type: String,

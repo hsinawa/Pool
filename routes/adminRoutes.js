@@ -27,26 +27,33 @@ router.post("/register", (req, res) => {
     });
   });
   
-  router.post("/login", (req, res) => {
-    Admin.find(
-      { email: req.body.email, password: req.body.password },
-      (err, docs) => {
-        if (docs.length > 0) {
-          const localsave = {
-            name: docs[0].name,
-            _id: docs[0]._id,
-            email: docs[0].email,
-            lname: "admin",
-          };
+  router.post("/login", async (req, res) => {
+    try {
+      console.log('Im here');
+      
+      const docs = await Admin.find({
+        email: req.body.email,
+        password: req.body.password
+      });
   
-          res.send(localsave);
-        } else {
-          return res
-            .status(400)
-            .json({ message: "Invalid Credentials for Admin" });
-        }
+      if (docs.length > 0) {
+        const localsave = {
+          name: docs[0].name,
+          _id: docs[0]._id,
+          email: docs[0].email,
+          lname: "admin"
+        };
+        
+        console.log('Now here');
+        res.send(localsave);
+      } else {
+        console.log('Bye here');
+        res.status(400).json({ message: "Invalid Credentials for Admin" });
       }
-    );
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: "Internal Server Error" });
+    }
   });
-
+  
 module.exports = router;

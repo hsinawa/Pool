@@ -3,9 +3,12 @@ import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import { LoginAdminReducer } from "./Reducers/adminReducer";
+import {GetAllEnqReducer} from './Reducers/enqReducer'
 
 const FinalReducer = combineReducers({
   LoginAdminReducer: LoginAdminReducer,
+  GetAllEnqReducer:GetAllEnqReducer,
+  
 });
 
 const InitialState = {};

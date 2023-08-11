@@ -19,3 +19,20 @@ export const enquiryContactAction = (data) => (dispatch) => {
       window.location.href = "/error";
     });
 };
+
+
+
+export const GetAllEnquiries = () =>dispatch =>{
+  dispatch({ type: Enq_Req });
+  axios
+    .get(`${Enq_API}/getall`)
+    .then((res) => {
+      dispatch({ type: Enq_Suc , payload:res.data});
+      
+    })
+    .catch((err) => {
+      dispatch({ type: Enq_Fail, payload: err });
+      
+      
+    });
+}

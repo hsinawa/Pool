@@ -22,10 +22,12 @@ export const AdminLoginAction = (admin) => (dispatch) => {
     .post("/api/admin/login", admin)
     .then((res) => {
       dispatch({ type: "Admin_Login_Success" });
+    
       localStorage.setItem("admin", JSON.stringify(res.data));
       window.location.href = "/admin";
     })
     .catch((err) => {
+     
       dispatch({ type: "Admin_Login_Failed", payload: err });
     });
 };

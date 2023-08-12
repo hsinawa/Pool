@@ -39,7 +39,7 @@ router.get("/getall", async (req, res) => {
 router.post("/prodbyId", async (req, res) => {
   try {
     const docs = await ProductSchema.findById(req.body.id);
-   
+
     res.send(docs);
   } catch (err) {
     console.error(err);
@@ -47,6 +47,37 @@ router.post("/prodbyId", async (req, res) => {
   }
 });
 
+router.post("/addreview", async (req, res) => {
+
+  try
+  {
+    const { data, id } = req.body;
+
+    const product = await ProductSchema.findById({ _id: id });
+  
+    const reviewmodel = {
+      name: data.name,
+  
+      contact: data.contact,
+    };
+  
+  await  product.quotes.push(reviewmodel);
+  await product.save();
+  res.send({ message: "Enquiry Submitted Successfully" });
+  }
+  catch(err){
+    return res.status(400).json({ message: `Something Went Wrong  ` });
+  }
+
+
+  // product.save((err) => {
+  //   if (err) {
+     
+  //   } else {
+  //     res.send({ message: "Review Submitted Successfully" });
+  //   }
+  // });
+});
 
 router.post("/delete", async (req, res) => {
   console.log("Del Reached");

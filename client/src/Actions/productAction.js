@@ -32,6 +32,18 @@ export const GetAllProductsAction = () => (dispatch) => {
     });
 };
 
+export const GetProductByIdAction = ({id}) => (dispatch) => {
+  dispatch({ type: Prod_Req });
+  axios
+    .post(`${Prod_API}/prodbyId`,{id})
+    .then((res) => {
+      dispatch({ type: Prod_Suc, payload: res.data });
+    })
+    .catch((err) => {
+      dispatch({ type: Prod_Fail, payload: err });
+    });
+};
+
 const Del_Prod = "Del_Prod";
 const Del_Prod_Suc = "Del_Prod_Suc";
 const Del_Prod_Fail = "Del_Prod_Fail";

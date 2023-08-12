@@ -1,148 +1,155 @@
-.images
-{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+.images {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.companybox
-{
-    
-    border-radius: 12px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+.companybox {
+  border-radius: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-.companybox1
-{
-    
-    border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+.companybox1 {
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
-.messageBox
-{
-    width: 93%;
+.pool-box {
+  display: grid;
+  grid-template-columns: auto auto auto;
+
+  width: "90%";
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-.images-1
-{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 6px;
-    height: 300px;
-  
+.messageBox {
+  width: 93%;
 }
 
-#carousel-image
-{
-    height: 500px;
+.images-1 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 6px;
+  height: 300px;
 }
 
-.whyusgrid
-{
-    margin-left: 10%;
+#carousel-image {
+  height: 500px;
 }
 
+.whyusgrid {
+  margin-left: 10%;
+}
 
-@use 'three-dots';
+@use "three-dots";
 
-.success-animation { margin:150px auto;}
+.success-animation {
+  margin: 150px auto;
+}
 
 .checkmark {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: block;
-    stroke-width: 2;
-    stroke: #4bb71b;
-    stroke-miterlimit: 10;
-    box-shadow: inset 0px 0px 0px #4bb71b;
-    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
-    position:relative;
-    top: 5px;
-    right: 5px;
-   margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #4bb71b;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #4bb71b;
+  animation: fill 0.4s ease-in-out 0.4s forwards,
+    scale 0.3s ease-in-out 0.9s both;
+  position: relative;
+  top: 5px;
+  right: 5px;
+  margin: 0 auto;
 }
 .checkmark__circle {
-    stroke-dasharray: 166;
-    stroke-dashoffset: 166;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-    stroke: #4bb71b;
-    fill: #fff;
-    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
- 
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #4bb71b;
+  fill: #fff;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
 }
 
 .checkmark__check {
-    transform-origin: 50% 50%;
-    stroke-dasharray: 48;
-    stroke-dashoffset: 48;
-    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
 }
 
 @keyframes stroke {
-    100% {
-        stroke-dashoffset: 0;
-    }
+  100% {
+    stroke-dashoffset: 0;
+  }
 }
 
 @keyframes scale {
-    0%, 100% {
-        transform: none;
-    }
+  0%,
+  100% {
+    transform: none;
+  }
 
-    50% {
-        transform: scale3d(1.1, 1.1, 1);
-    }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
 }
 
 @keyframes fill {
-    100% {
-        box-shadow: inset 0px 0px 0px 30px #4bb71b;
-    }
+  100% {
+    box-shadow: inset 0px 0px 0px 30px #4bb71b;
+  }
 }
 
+@media screen and (max-width: 900px) {
+  .pool-box {
+    display: grid;
+    grid-template-columns: auto auto;
 
-
-@media screen and (max-width:900px) {
-    
+    width: "90%";
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-@media screen and (max-width:600px) {
-    #carousel-image
-{
+@media screen and (max-width: 600px) {
+  #carousel-image {
     height: 300px;
-}
+  }
 
-.images-1
-{
+  .pool-box {
+    display: block;
+
+    width: "90%";
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .images-1 {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 6px;
     height: 150px;
-  
-}
+  }
 
-.messageBox
-{
+  .messageBox {
     width: 85%;
-   
-}
+  }
 
-.whyusgrid
-{
+  .whyusgrid {
     margin-left: 15%;
+  }
 }
 
-}
-
-
-@media screen and (max-width:450px) {
-    
+@media screen and (max-width: 450px) {
 }

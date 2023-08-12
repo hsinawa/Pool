@@ -36,6 +36,18 @@ router.get("/getall", async (req, res) => {
   }
 });
 
+router.post("/prodbyId", async (req, res) => {
+  try {
+    const docs = await ProductSchema.findById(req.body.id);
+   
+    res.send(docs);
+  } catch (err) {
+    console.error(err);
+    return res.status(400).json({ message: "Something Went Wrong" });
+  }
+});
+
+
 router.post("/delete", async (req, res) => {
   console.log("Del Reached");
 

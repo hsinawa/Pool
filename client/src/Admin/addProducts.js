@@ -144,7 +144,7 @@ const AddProductsAdmin = () => {
                   }
                   placeholder="Value"
                 />
-                 <button type="button" onClick={() => removeDescriptionField(index)}>
+                 <button type="button" onClick={() => removeDescriptionField(index)} style={{backgroundColor:'red'}} >
               Remove
             </button>
               </div>

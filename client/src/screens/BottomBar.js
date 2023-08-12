@@ -168,7 +168,7 @@ const GridSection = () => {
               <Grid item xs={2} md={2}>
                 <p title="E-Mail">
                   <a
-                    href={`mailto:wadbrosindia@gmail.com`}
+                    href={`mailto:varinder@wadbrosindia.com`}
                     target="_blank"
                     style={{ color: "white", cursor: "pointer" }}
                   >

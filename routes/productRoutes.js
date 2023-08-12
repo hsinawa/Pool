@@ -14,14 +14,14 @@ router.post("/addproduct", async (req, res) => {
       description: req.body.description,
       price: req.body.price,
       details: req.body.details,
-      category: req.body.category,
+      Category: req.body.category,
     });
 
     await product.save();
 
     res.send({ message: "Product Added Successfully" });
   } catch (err) {
-    res.status(400).json({ message: `Something Went Wrong ${err} ` });
+    return res.status(400).json({ message: `Something Went Wrong ${err} ` });
   }
 });
 
@@ -32,7 +32,19 @@ router.get("/getall", async (req, res) => {
     res.send(docs);
   } catch (err) {
     console.error(err);
-    res.status(400).json({ message: "Something Went Wrong" });
+    return res.status(400).json({ message: "Something Went Wrong" });
+  }
+});
+
+router.post("/delete", async (req, res) => {
+  console.log("Del Reached");
+
+  try {
+    await ProductSchema.findByIdAndDelete(req.body.id);
+
+    res.send({ message: "Deleted Successfully" });
+  } catch (err) {
+    return res.status(400).json({ message: `Something Went Wrong ${err} ` });
   }
 });
 

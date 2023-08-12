@@ -12,6 +12,8 @@ import Admin from "./Admin/admin";
 import EnquiriesAdmin from "./Admin/Enquries";
 import ErrorPage from "./screens/errorPage";
 import AddProductsAdmin from "./Admin/addProducts";
+import ProductListAdmin from "./Admin/productListAdmin";
+import AllProducts from "./screens/productsAll";
 
 
 
@@ -28,11 +30,13 @@ function App() {
         <Route path="/contact" element={<ContactPage />} ></Route>
         <Route path="/aboutdeveloper" element={<AboutDeveloper />} ></Route>
         <Route path="/adminlogin" element={<AdminPage />} ></Route>
+        <Route path="/products" element={<AllProducts />} ></Route>
         <Route path="/error" element={<ErrorPage />} ></Route>
         <Route path="/*" element={<ErrorPage />} ></Route>
         {admin?<Route path="/admin" element={<Admin />} ></Route>:null}
         {admin?<Route path="/admin/enquirylist" element={<EnquiriesAdmin />} ></Route>:null}
         {admin?<Route path="/admin/addproduct" element={<AddProductsAdmin />} ></Route>:null}
+        {admin?<Route path="/admin/productlist" element={<ProductListAdmin />} ></Route>:null}
         
       </Routes>
       </BrowserRouter>

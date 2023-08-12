@@ -10,8 +10,8 @@ import textData from "../Static/Text.json";
 
 import PersonIcon from "@mui/icons-material/Person";
 import CottageIcon from "@mui/icons-material/Cottage";
-import PhoneIcon from '@mui/icons-material/Phone';
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
+import PhoneIcon from "@mui/icons-material/Phone";
+import ConnectWithoutContactIcon from "@mui/icons-material/ConnectWithoutContact";
 
 const ContactPage = () => {
   return (
@@ -72,7 +72,7 @@ const ContactPage = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-            {textData.AboutPage.CompanyFactSheet.basicinfo.address[1]}
+              {textData.AboutPage.CompanyFactSheet.basicinfo.address[1]}
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -83,7 +83,7 @@ const ContactPage = () => {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-           <Typography style={{ color: "#505050" }}>
+            <Typography style={{ color: "#505050" }}>
               {" "}
               <PhoneIcon
                 style={{
@@ -97,7 +97,13 @@ const ContactPage = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-          <a href='tel:+9108047645700' style={{textDecoration:'none', color:'black'}} >08047645700</a>  
+              <a
+                href="tel:+919810970755"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                {" "}
+                9810970755
+              </a>
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -108,7 +114,7 @@ const ContactPage = () => {
             aria-controls="panel2a-content"
             id="panel2a-header"
           >
-             <Typography style={{ color: "#505050" }}>
+            <Typography style={{ color: "#505050" }}>
               {" "}
               <ConnectWithoutContactIcon
                 style={{

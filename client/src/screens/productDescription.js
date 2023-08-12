@@ -5,6 +5,7 @@ import {
   AddReviewProductAction,
   GetProductByIdAction,
 } from "../Actions/productAction";
+import RecomendationGrid from "./RecommendationGrid";
 import { GetAllproductsReducer } from "../Reducers/productReducer";
 import { Button, CircularProgress } from "@mui/material";
 import ErrorPage from "./errorPage";
@@ -163,22 +164,31 @@ const ProductDescription = () => {
                           id="outlined-basic"
                           label="Enter Name"
                           variant="outlined"
-                          autoComplete='off'
-                          style={{width:'90%', marginLeft:'5%', marginRight:'auto', marginTop:'3%'}}
+                          autoComplete="off"
+                          style={{
+                            width: "90%",
+                            marginLeft: "5%",
+                            marginRight: "auto",
+                            marginTop: "3%",
+                          }}
                           value={name}
                           onChange={(e) => {
                             setname(e.target.value);
                           }}
                         />
-                        
 
                         <TextField
                           id="outlined-basic"
                           label="Enter Number"
-                          type='tel'
+                          type="tel"
                           variant="outlined"
-                          style={{width:'90%', marginLeft:'5%', marginRight:'auto', marginTop:'3%'}}
-                          autoComplete='off'
+                          style={{
+                            width: "90%",
+                            marginLeft: "5%",
+                            marginRight: "auto",
+                            marginTop: "3%",
+                          }}
+                          autoComplete="off"
                           value={contact}
                           onChange={(e) => {
                             setcontact(e.target.value);
@@ -192,7 +202,7 @@ const ProductDescription = () => {
                             width: "90%",
                             marginLeft: "5%",
                             marginRight: "auto",
-                            marginTop:'3%',
+                            marginTop: "3%",
                             backgroundColor: "#002D62",
                           }}
                           type="submit"
@@ -326,6 +336,34 @@ const ProductDescription = () => {
             </Grid>
           </Grid>
         </Box>
+      )}
+
+      <br />
+      <br />
+      <br />
+
+      {products && (
+        <p>
+          <Box sx={{ flexGrow: 1 , marginTop:'5%'}}  >
+            <Grid container spacing={2}>
+              <Grid item xs={5} md={5}>
+                <h3 style={{ color: "#002D62" }}>Similar Items</h3>
+              </Grid>
+              <Grid item xs={5} md={5}>
+                {" "}
+                <p style={{ color: "#89CFF0", fontWeight:'bold' }}>
+                  <a
+                    href={`/product/${products.type}`}
+                    style={{ textDecoration: "none", textAlign:'right', float:'right' }}
+                  >
+                    View All
+                  </a>
+                </p>{" "}
+              </Grid>
+            </Grid>
+          </Box>
+          <RecomendationGrid type={products.type} />
+        </p>
       )}
     </div>
   );

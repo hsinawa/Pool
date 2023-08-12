@@ -47,6 +47,17 @@ router.post("/prodbyId", async (req, res) => {
   }
 });
 
+router.post("/prodbytype", async (req, res) => {
+  try {
+    const docs = await ProductSchema.find({type:req.body.type});
+
+    res.send(docs);
+  } catch (err) {
+    console.error(err);
+    return res.status(400).json({ message: "Something Went Wrong" });
+  }
+});
+
 router.post("/addreview", async (req, res) => {
 
   try
@@ -69,14 +80,6 @@ router.post("/addreview", async (req, res) => {
     return res.status(400).json({ message: `Something Went Wrong  ` });
   }
 
-
-  // product.save((err) => {
-  //   if (err) {
-     
-  //   } else {
-  //     res.send({ message: "Review Submitted Successfully" });
-  //   }
-  // });
 });
 
 router.post("/delete", async (req, res) => {

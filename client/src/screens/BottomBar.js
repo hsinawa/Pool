@@ -77,7 +77,7 @@ const GridSection = () => {
                 <h3>Our Products</h3>
                 <p>
                   <a
-                    href="/employeelogin"
+                    href="/product/Accessories"
                     style={{ textDecoration: "none", color: "white" }}
                   >
                     {" "}
@@ -86,7 +86,7 @@ const GridSection = () => {
                 </p>
                 <p>
                   <a
-                    href="/employeelogin"
+                    href="/product/Equiments"
                     style={{ textDecoration: "none", color: "white" }}
                   >
                     {" "}
@@ -95,7 +95,7 @@ const GridSection = () => {
                 </p>
                 <p>
                   <a
-                    href="/employeelogin"
+                    href="/product/Chemicals"
                     style={{ textDecoration: "none", color: "white" }}
                   >
                     {" "}

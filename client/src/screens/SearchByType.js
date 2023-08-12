@@ -5,7 +5,7 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import {  CardActionArea } from "@mui/material";
+import { CardActionArea } from "@mui/material";
 
 //Static data
 import textData from "../Static/Text.json";
@@ -33,7 +33,6 @@ const CompSearchByTypeonent = () => {
       </h3>
       <h3
         style={{
-         
           color: "#89CFF0",
         }}
       >
@@ -50,19 +49,26 @@ const CompSearchByTypeonent = () => {
             className="head-text"
           >
             <Card>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  className="images-1"
-                  src={image_pool_acc}
-                  alt="Pool Accessories"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div" style={{color:'#002D62'}} >
-                    Swimming Pool Accessories
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
+              <a href="/product/Accessories" style={{textDecoration:'none'}} >
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    className="images-1"
+                    src={image_pool_acc}
+                    alt="Pool Accessories"
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                      style={{ color: "#002D62" }}
+                    >
+                      Swimming Pool Accessories
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </a>
             </Card>
           </Grid>
           <Grid
@@ -73,19 +79,26 @@ const CompSearchByTypeonent = () => {
             className="head-text"
           >
             <Card>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  className="images-1"
-                  src={image_pool_maint}
-                  alt="Pool Maintainance"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div" style={{color:'#002D62'}}>
-                    Pool Maintenance and Equipment
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
+              <a href="/product/Equiments"  style={{textDecoration:'none'}} >
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    className="images-1"
+                    src={image_pool_maint}
+                    alt="Pool Maintainance"
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                      style={{ color: "#002D62" }}
+                    >
+                      Pool Maintenance and Equipment
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </a>
             </Card>
           </Grid>
 
@@ -97,19 +110,26 @@ const CompSearchByTypeonent = () => {
             className="head-text"
           >
             <Card>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  className="images-1"
-                  src={image_pool_chem}
-                  alt="Pool Accessories"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div" style={{color:'#002D62'}}>
-                    Swimming Pool Chemicals
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
+              <a href="/product/Chemicals"  style={{textDecoration:'none'}} >
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    className="images-1"
+                    src={image_pool_chem}
+                    alt="Pool Accessories"
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                      style={{ color: "#002D62" }}
+                    >
+                      Swimming Pool Chemicals
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </a>
             </Card>
           </Grid>
         </Grid>

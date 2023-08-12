@@ -15,6 +15,7 @@ import AddProductsAdmin from "./Admin/addProducts";
 import ProductListAdmin from "./Admin/productListAdmin";
 import AllProducts from "./screens/productsAll";
 import ProductDescription from "./screens/productDescription";
+import ProductsByType from "./screens/ProductsBYType";
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/aboutdeveloper" element={<AboutDeveloper />} ></Route>
         <Route path="/adminlogin" element={<AdminPage />} ></Route>
         <Route path="/products" element={<AllProducts />} ></Route>
+        <Route path="/product/:type" element={<ProductsByType />} ></Route>
         <Route path="//productitem/:id" element={<ProductDescription />} ></Route>
         <Route path="/error" element={<ErrorPage />} ></Route>
         <Route path="/*" element={<ErrorPage />} ></Route>

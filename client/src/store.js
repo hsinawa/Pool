@@ -4,12 +4,13 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import { LoginAdminReducer } from "./Reducers/adminReducer";
 import {GetAllEnqReducer} from './Reducers/enqReducer';
-import {GetAllproductsReducer} from './Reducers/productReducer'
+import {GetAllproductsReducer,GetAllproductsReducerT} from './Reducers/productReducer'
 
 const FinalReducer = combineReducers({
   LoginAdminReducer: LoginAdminReducer,
   GetAllEnqReducer:GetAllEnqReducer,
-  GetAllproductsReducer:GetAllproductsReducer
+  GetAllproductsReducer:GetAllproductsReducer,
+  GetAllproductsReducerT:GetAllproductsReducerT
   
 });
 

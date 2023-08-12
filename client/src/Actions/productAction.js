@@ -46,6 +46,26 @@ export const GetProductByIdAction =
       });
   };
 
+
+  const Prod_ReqT = "Prod_ReqT";
+const Prod_SucT = "Prod_SucT";
+const Prod_FailT = "Prod_FailT";
+
+  export const GetProductByTypeAction =
+  ({ type }) =>
+  (dispatch) => {
+    dispatch({ type: Prod_ReqT });
+    axios
+      .post(`${Prod_API}/prodbytype`, { type })
+      .then((res) => {
+        dispatch({ type: Prod_SucT, payload: res.data });
+      })
+      .catch((err) => {
+        dispatch({ type: Prod_FailT, payload: err });
+      });
+  };
+
+
 const Prod_Enq_Req = "Prod_Enq_Req";
 const Prod_Enq_Suc = "Prod_Enq_Suc";
 const Prod_Enq_Fail = "Prod_Enq_Fail";

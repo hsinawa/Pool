@@ -28,3 +28,34 @@ export const GetAllproductsReducer = (state = { products: [] }, action) => {
         return state;
     }
   };
+
+
+  const Prod_ReqT = "Prod_ReqT";
+  const Prod_SucT = "Prod_SucT";
+  const Prod_FailT = "Prod_FailT";
+  export const GetAllproductsReducerT = (state = { products: [] }, action) => {
+    switch (action.type) {
+      case Prod_ReqT:
+        return {
+          ...state,
+          loading: true,
+        };
+  
+      case Prod_SucT:
+        return {
+          ...state,
+          loading: false,
+          products: action.payload,
+        };
+  
+      case Prod_FailT:
+        return {
+          ...state,
+          loading: true,
+          error: false,
+        };
+  
+      default:
+        return state;
+    }
+  };

@@ -11,6 +11,7 @@ import textData from "../Static/Text.json";
 import CompSearchByTypeonent from "./SearchByType";
 import WhyUS from "./WhyUS";
 import ContactUs from "./contactUs";
+import AllProducts from "./productsAll";
 
 const Homescreen = () => {
 
@@ -93,6 +94,7 @@ const Homescreen = () => {
 
       <CompSearchByTypeonent />
       <WhyUS />
+      <AllProducts limit = {3} />
       <ContactUs />
     </div>
   );

@@ -146,27 +146,54 @@ const ProductDescription = () => {
                       </Grid>
                       <Grid item xs={6} md={6}>
                         <p style={{ color: "#202020", textAlign: "start" }}>
-                          {products.price}
+                        ₹ {products.price} / Unit
                         </p>
                       </Grid>
 
                       <Grid item xs={6} md={6}>
-                <p
-                  style={{
-                    fontWeight: "bold",
-                    color: "#989898",
-                    textAlign: "left",
-                    marginLeft: "3%",
-                  }}
-                >
-                 Category:
-                </p>
-              </Grid>
-              <Grid item xs={6} md={6}>
-                <p style={{ color: "#202020", textAlign: "start" }}>
-                 {products.category}
-                </p>
-              </Grid>
+                        <p
+                          style={{
+                            fontWeight: "bold",
+                            color: "#989898",
+                            textAlign: "left",
+                            marginLeft: "3%",
+                          }}
+                        >
+                          Category:
+                        </p>
+                      </Grid>
+                      <Grid item xs={6} md={6}>
+                        <p style={{ color: "#202020", textAlign: "start" }}>
+                          {products.Category}
+                        </p>
+                      </Grid>
+
+                      <Grid item xs={6} md={6}>
+                        {products?.description?.map((k) => {
+                          return (
+                            <p
+                              style={{
+                                fontWeight: "bold",
+                                color: "#989898",
+                                textAlign: "left",
+                                marginLeft: "3%",
+                              }}
+                            >
+                              {k.key}
+                            </p>
+                          );
+                        })}
+                      </Grid>
+                      <Grid item xs={6} md={6}>
+                      {products?.description?.map((k) => {
+                        return (
+                          <p style={{ color: "#202020", textAlign: "start" }}>
+                            {k.value}
+                          </p>
+                        );
+                      })}
+ </Grid>
+
                     </Grid>
                   </Box>
                 </p>

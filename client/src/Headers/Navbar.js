@@ -2,15 +2,19 @@ import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import React, { useEffect } from "react";
 import "./navStyle.css";
-import poolItemsData from "./fake.json";
+
 import logo from "../Static/wadbros.jpg";
 
+import TextField from "@mui/material/TextField";
+import Stack from "@mui/material/Stack";
+import Autocomplete from "@mui/material/Autocomplete";
 import { useDispatch, useSelector } from "react-redux";
 import {
   DeleteProductAction,
   GetAllProductsAction,
 } from "../Actions/productAction";
 import { GetAllproductsReducer } from "../Reducers/productReducer";
+import MuiAutocomplete from "./AutoComplete";
 
 function Navbar() {
   const admin = JSON.parse(localStorage.getItem("admin"));
@@ -21,39 +25,27 @@ function Navbar() {
     navRef.current.classList.toggle("responsive_nav");
   };
 
-  const [query, setQuery] = useState("");
-  const [testing,settesting] = useState({
-    name:'3',
-    id:'234'
-  })
-  const [suggestions, setSuggestions] = useState([]);
   const { products, loading, error } = useSelector(
     (state) => state.GetAllproductsReducer
   );
-
-
 
   const dispatch = useDispatch();
   React.useEffect(() => {
     dispatch(GetAllProductsAction());
   }, [dispatch]);
 
-  const fetchSuggestions = () => {
-    if (products) {
-      const filteredSuggestions = products?.filter((item) =>
-        item.name.toLowerCase().includes(query.toLowerCase())
-      );
-      setSuggestions(filteredSuggestions);
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleInputChange = (event, value) => {
+    setSelectedOption(value);
+  };
+
+  const handleOptionSelected = (event, value) => {
+    if (value) {
+      
+      window.location.href = `/productitem/${value._id}`;
     }
   };
-
-  const handleInputChange = (event) => {
-    const newQuery = event.target.value;
-    setQuery(newQuery);
-    fetchSuggestions(); // Call the fetchSuggestions function on input change
-  };
-
-
 
   return (
     <header>
@@ -88,24 +80,43 @@ function Navbar() {
         <a href="/about">About Us</a>
         <a href="/products">Our Products</a>
         <a href="/contact">Contact Us</a>
-        <div className="autocomplete-search" >
-          <input
-            type="text"
-            placeholder="Search..."
-            value={query}
-            onChange={handleInputChange}
 
-          />
-        <ul className="suggestions-list">
-  {suggestions.map((suggestion, index) => (
-    <li key={index} >
-      <a href={`/productitem/${suggestion._id}`}  >{suggestion.name}</a>
-    </li>
-  ))}
-</ul>
-
-        </div>
  
+        {/* <Autocomplete
+          id="free-solo-demo"
+          freeSolo
+          placeholder='Search...'
+          options={products}
+          getOptionLabel={(option) => option.name}
+          renderInput={(params) => <TextField {...params}  />}
+          onChange={handleOptionSelected}
+          renderOption={(props, option) => (
+            <li {...props}>
+              <a href={`/productitem/${option._id}`} style={{textDecoration:'none'}} >{option.name}</a>
+            </li>
+          )}
+        /> */}
+
+<Autocomplete
+      id="free-solo-demo"
+      freeSolo
+      options={products}
+      getOptionLabel={(option) => option.name}
+      onChange={handleOptionSelected}
+      renderOption={(props, option) => (
+        <li {...props}>
+          <a href={`/productitem/${option._id}`}>{option.name}</a>
+        </li>
+      )}
+      renderInput={(params) => (
+        <TextField
+          {...params}
+          style={{ width: '200px' }} // Increase width of TextField
+          placeholder="Search for products" // Add a placeholder
+        />
+      )}
+    />
+
 
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />

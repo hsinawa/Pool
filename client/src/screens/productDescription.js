@@ -9,9 +9,7 @@ import RecomendationGrid from "./RecommendationGrid";
 import { GetAllproductsReducer } from "../Reducers/productReducer";
 import { Button, CircularProgress } from "@mui/material";
 import ErrorPage from "./errorPage";
-import textData from "../Static/Text.json";
 import Box from "@mui/material/Box";
-import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
 import Modal from "@mui/joy/Modal";
@@ -29,7 +27,7 @@ const ProductDescription = () => {
 
   useEffect(() => {
     dispatch(GetProductByIdAction({ id }));
-  }, [dispatch]);
+  }, [id,dispatch]);
 
   const useCheckMobileScreen = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
@@ -70,7 +68,7 @@ const ProductDescription = () => {
       {loading && <CircularProgress />}
       {error && <ErrorPage />}
 
-      {products && (
+      { products && (
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             <Grid item xs={10} md={6}>
@@ -83,6 +81,8 @@ const ProductDescription = () => {
               >
                 <img
                   src={products.image}
+                  alt='src:Google'
+                  
                   style={{
                     width: "90%",
                     marginLeft: "15%",

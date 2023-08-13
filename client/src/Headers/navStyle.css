@@ -94,7 +94,7 @@ nav {
   }
   
   .autocomplete-search input:focus + .suggestions-list {
-    display: block; /* Display when input is focused */
+    display: grid; /* Display when input is focused */
   }
   
   .suggestions-list li {

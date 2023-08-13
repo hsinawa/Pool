@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { GetProductByTypeAction } from "../Actions/productAction";
 import { GetAllproductsReducerT } from "../Reducers/productReducer";
-import { Button, CircularProgress } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 import ErrorPage from "../screens/errorPage";
 import GridCard from "./GridProduct";
-import { useParams } from "react-router-dom";
+
 
 const RecomendationGrid = ({type}) => {
  
@@ -16,7 +16,7 @@ const RecomendationGrid = ({type}) => {
       const dispatch = useDispatch();
       useEffect(() => {
         dispatch(GetProductByTypeAction({type}));
-      }, [type]);
+      }, [type,dispatch]);
 
       
 

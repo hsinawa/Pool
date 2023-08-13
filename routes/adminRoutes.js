@@ -29,7 +29,7 @@ router.post("/register", (req, res) => {
   
   router.post("/login", async (req, res) => {
     try {
-      console.log('Im here');
+    
       
       const docs = await Admin.find({
         email: req.body.email,
@@ -44,10 +44,10 @@ router.post("/register", (req, res) => {
           lname: "admin"
         };
         
-        console.log('Now here');
+        
         res.send(localsave);
       } else {
-        console.log('Bye here');
+       
         res.status(400).json({ message: "Invalid Credentials for Admin" });
       }
     } catch (err) {

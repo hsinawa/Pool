@@ -105,7 +105,7 @@ function Navbar() {
       onChange={handleOptionSelected}
       renderOption={(props, option) => (
         <li {...props}>
-          <a href={`/productitem/${option._id}`}>{option.name}</a>
+          <a href={`/productitem/${option._id}`} style={{textDecoration:'none'}} >{option.name}</a>
         </li>
       )}
       renderInput={(params) => (

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.36640e1a.css",
-    "main.js": "/static/js/main.e3125e63.js",
+    "main.js": "/static/js/main.03d3c70e.js",
     "static/media/brochure-wadbrosindia.pdf": "/static/media/brochure-wadbrosindia.6e0dd6249b18d7426ece.pdf",
     "static/media/pool-acc.jpeg": "/static/media/pool-acc.e6a7ad23534213b8a4de.jpeg",
     "static/media/wadbros.jpg": "/static/media/wadbros.41446baa8ef02176b517.jpg",
@@ -12,10 +12,10 @@
     "static/media/error.webp": "/static/media/error.c5c250880769b6b233f9.webp",
     "index.html": "/index.html",
     "main.36640e1a.css.map": "/static/css/main.36640e1a.css.map",
-    "main.e3125e63.js.map": "/static/js/main.e3125e63.js.map"
+    "main.03d3c70e.js.map": "/static/js/main.03d3c70e.js.map"
   },
   "entrypoints": [
     "static/css/main.36640e1a.css",
-    "static/js/main.e3125e63.js"
+    "static/js/main.03d3c70e.js"
   ]
 }

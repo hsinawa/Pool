@@ -32,17 +32,22 @@ export const GetAllProductsAction = () => (dispatch) => {
     });
 };
 
+
+const Prod_ReqID = "Prod_ReqID";
+const Prod_SucID = "Prod_SucID";
+const Prod_FailID = "Prod_FailID";
+
 export const GetProductByIdAction =
   ({ id }) =>
   (dispatch) => {
-    dispatch({ type: Prod_Req });
+    dispatch({ type: Prod_ReqID });
     axios
       .post(`${Prod_API}/prodbyId`, { id })
       .then((res) => {
-        dispatch({ type: Prod_Suc, payload: res.data });
+        dispatch({ type: Prod_SucID, payload: res.data });
       })
       .catch((err) => {
-        dispatch({ type: Prod_Fail, payload: err });
+        dispatch({ type: Prod_FailID, payload: err });
       });
   };
 

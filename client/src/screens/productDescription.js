@@ -6,7 +6,7 @@ import {
   GetProductByIdAction,
 } from "../Actions/productAction";
 import RecomendationGrid from "./RecommendationGrid";
-import { GetAllproductsReducer } from "../Reducers/productReducer";
+import { GetDescriptionproductsReducer } from "../Reducers/productReducer";
 import { Button, CircularProgress } from "@mui/material";
 import ErrorPage from "./errorPage";
 import Box from "@mui/material/Box";
@@ -22,7 +22,7 @@ const ProductDescription = () => {
   const dispatch = useDispatch();
 
   const { products, loading, error } = useSelector(
-    (state) => state.GetAllproductsReducer
+    (state) => state.GetDescriptionproductsReducer
   );
 
   useEffect(() => {

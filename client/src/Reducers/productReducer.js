@@ -30,6 +30,37 @@ export const GetAllproductsReducer = (state = { products: [] }, action) => {
   };
 
 
+  const Prod_ReqID = "Prod_ReqID";
+const Prod_SucID = "Prod_SucID";
+const Prod_FailID = "Prod_FailID";
+  export const GetDescriptionproductsReducer = (state = { products: [] }, action) => {
+    switch (action.type) {
+      case Prod_ReqID:
+        return {
+          ...state,
+          loading: true,
+        };
+  
+      case Prod_SucID:
+        return {
+          ...state,
+          loading: false,
+          products: action.payload,
+        };
+  
+      case Prod_FailID:
+        return {
+          ...state,
+          loading: true,
+          error: false,
+        };
+  
+      default:
+        return state;
+    }
+  };
+
+
   const Prod_ReqT = "Prod_ReqT";
   const Prod_SucT = "Prod_SucT";
   const Prod_FailT = "Prod_FailT";

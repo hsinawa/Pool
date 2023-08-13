@@ -97,7 +97,7 @@ const Homescreen = () => {
 
       <CompSearchByTypeonent />
       <WhyUS />
-      <AllProducts limit = {3} />
+    
       <ContactUs />
     </div>
   );

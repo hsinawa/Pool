@@ -27,7 +27,7 @@ const GridSection = () => {
         <Grid container spacing={2}>
           <Grid item xs={10} md={6} sx={{ mx: "auto" }}>
             <Grid container spacing={2}>
-              <Grid item xs={4} md={4}>
+              <Grid item xs={6} md={6}>
                 <h3>Our Compant</h3>
 
                 <p>
@@ -73,7 +73,7 @@ const GridSection = () => {
                 </p>
               </Grid>
 
-              <Grid item xs={4} md={4}>
+              <Grid item xs={6} md={6}>
                 <h3>Our Products</h3>
                 <p>
                   <a
@@ -104,19 +104,7 @@ const GridSection = () => {
                 </p>
               </Grid>
 
-              <Grid item xs={4} md={4}>
-                <h3>About Developer</h3>
-                <p>
-                  <a
-                    href="/aboutdeveloper"
-                    style={{ textDecoration: "none", color: "white" }}
-                  >
-                    {" "}
-                    See Details
-                  </a>{" "}
-                </p>
-              
-              </Grid>
+    
             </Grid>
           </Grid>
           <Grid item xs={10} md={6} sx={{ mx: "auto" }}>
@@ -126,55 +114,30 @@ const GridSection = () => {
                 <p></p>
               </Grid>
 
-              <Grid item xs={2} md={2}>
-                <p title="FaceBook">
-                  <a
-                    href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.wadbrosindia.com%2F`}
-                    target="_blank"
-                    style={{ color: "white", cursor: "pointer" }}
-                  >
-                    <FacebookIcon
-                      style={{ verticalAlign: "-6px", fontSize: "35px" }}
-                    />
-                  </a>
-                </p>
-              </Grid>
-              <Grid item xs={2} md={2}>
-                <p title="Twitter:X">
-                  <a
-                    href={`https://twitter.com/intent/tweet?url=https://www.wadbrosindia.com/&text=Wadbros%20India`}
-                    target="_blank"
-                    style={{ color: "white", cursor: "pointer" }}
-                  >
-                    <TwitterIcon
-                      style={{ verticalAlign: "-6px", fontSize: "35px" }}
-                    />
-                  </a>
-                </p>
-              </Grid>
-              <Grid item xs={2} md={2}>
-                <p title="LinkedIn">
-                  <a
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.wadbrosindia.com%2F`}
-                    target="_blank"
-                    style={{ color: "white", cursor: "pointer" }}
-                  >
-                    <LinkedInIcon
-                      style={{ verticalAlign: "-6px", fontSize: "35px" }}
-                    />
-                  </a>
-                </p>
-              </Grid>
-              <Grid item xs={2} md={2}>
+         
+      
+         
+              <Grid item xs={3} md={3}>
                 <p title="E-Mail">
                   <a
                     href={`mailto:varinder@wadbrosindia.com`}
                     target="_blank"
                     style={{ color: "white", cursor: "pointer" }}
                   >
-                    <ContactMailIcon
+                   <ContactMailIcon
                       style={{ verticalAlign: "-6px", fontSize: "35px" }}
-                    />
+                    /> 
+                  </a>
+                </p>
+              </Grid>
+              <Grid item xs={3} md={3}>
+              <p title="E-Mail">
+                  <a
+                    href={`mailto:varinder@wadbrosindia.com`}
+                    target="_blank"
+                    style={{ color: "white", cursor: "pointer", textDecoration:"none", marginLeft:'-40%' }}
+                  >
+                  varinder@wadbrosindia.com
                   </a>
                 </p>
               </Grid>

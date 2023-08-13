@@ -5,7 +5,7 @@ import { GetAllproductsReducer } from "../Reducers/productReducer";
 import { Button, CircularProgress } from "@mui/material";
 import ErrorPage from "../screens/errorPage";
 import GridCard from "./GridProduct";
-import "./commonStyle.css";
+
 
 const AllProducts = ({ limit }) => {
   const { products, loading, error } = useSelector(
@@ -26,31 +26,18 @@ const AllProducts = ({ limit }) => {
         className="pool-box"
         style={{ width: "95%", marginLeft: "auto", marginRight: "auto" }}
       >
-        {limit === 3
-          ? products &&
-            products.slice(0,3).map((i) => {
-              return (
-                <a
-                  href={`/productitem/${i._id}`}
-                  style={{ textDecoration: "none", margin: "10px" }}
-                >
-                  {" "}
-                  <GridCard i={i} />
-                </a>
-              );
-            })
-          : products &&
-            products.map((i) => {
-              return (
-                <a
-                  href={`/productitem/${i._id}`}
-                  style={{ textDecoration: "none", margin: "10px" }}
-                >
-                  {" "}
-                  <GridCard i={i} />
-                </a>
-              );
-            })}
+        {products &&
+          products.map((i) => {
+            return (
+              <a
+                href={`/productitem/${i._id}`}
+                style={{ textDecoration: "none", margin: "10px" }}
+              >
+                {" "}
+                <GridCard i={i} />
+              </a>
+            );
+          })}
       </div>
     </div>
   );

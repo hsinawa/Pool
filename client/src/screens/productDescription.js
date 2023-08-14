@@ -27,7 +27,7 @@ const ProductDescription = () => {
 
   useEffect(() => {
     dispatch(GetProductByIdAction({ id }));
-  }, [id,dispatch]);
+  }, [id, dispatch]);
 
   const useCheckMobileScreen = () => {
     const [width, setWidth] = React.useState(window.innerWidth);
@@ -68,7 +68,7 @@ const ProductDescription = () => {
       {loading && <CircularProgress />}
       {error && <ErrorPage />}
 
-      { products && (
+      {products && (
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             <Grid item xs={10} md={6}>
@@ -81,8 +81,7 @@ const ProductDescription = () => {
               >
                 <img
                   src={products.image}
-                  alt='src:Google'
-                  
+                  alt="src:Google"
                   style={{
                     width: "90%",
                     marginLeft: "15%",
@@ -179,17 +178,19 @@ const ProductDescription = () => {
 
                         <TextField
                           id="outlined-basic"
-                          label="Enter Number"
-                          type="tel"
+                          label="Enter Contact Details"
                           variant="outlined"
+                          autoComplete="off"
+                          type="tel"
+                          required
+                          value={contact}
+                          inputProps={{ maxLength: 12, minLength: 10 }}
                           style={{
                             width: "90%",
                             marginLeft: "5%",
                             marginRight: "auto",
                             marginTop: "3%",
                           }}
-                          autoComplete="off"
-                          value={contact}
                           onChange={(e) => {
                             setcontact(e.target.value);
                           }}
@@ -344,17 +345,21 @@ const ProductDescription = () => {
 
       {products && (
         <p>
-          <Box sx={{ flexGrow: 1 , marginTop:'5%'}}  >
+          <Box sx={{ flexGrow: 1, marginTop: "5%" }}>
             <Grid container spacing={2}>
               <Grid item xs={5} md={5}>
                 <h3 style={{ color: "#002D62" }}>Similar Items</h3>
               </Grid>
               <Grid item xs={5} md={5}>
                 {" "}
-                <p style={{ color: "#89CFF0", fontWeight:'bold' }}>
+                <p style={{ color: "#89CFF0", fontWeight: "bold" }}>
                   <a
                     href={`/product/${products.type}`}
-                    style={{ textDecoration: "none", textAlign:'right', float:'right' }}
+                    style={{
+                      textDecoration: "none",
+                      textAlign: "right",
+                      float: "right",
+                    }}
                   >
                     View All
                   </a>

@@ -4,44 +4,42 @@ import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import './commonStyle.css';
+import "./commonStyle.css";
 import { useDispatch } from "react-redux";
-import {enquiryContactAction} from '../Actions/enquiryAction'
+import { enquiryContactAction } from "../Actions/enquiryAction";
 
 const ContactUs = () => {
   const [number, setnumber] = useState("");
   const [name, setname] = useState("");
   const [message, setmessage] = useState("");
-const [loading,setisLoading] = useState(false)
+  const [loading, setisLoading] = useState(false);
   const useCheckMobileScreen = () => {
     const [width, setWidth] = useState(window.innerWidth);
     const handleWindowSizeChange = () => {
-            setWidth(window.innerWidth);
-    }
+      setWidth(window.innerWidth);
+    };
 
     React.useEffect(() => {
-        window.addEventListener('resize', handleWindowSizeChange);
-        return () => {
-            window.removeEventListener('resize', handleWindowSizeChange);
-        }
+      window.addEventListener("resize", handleWindowSizeChange);
+      return () => {
+        window.removeEventListener("resize", handleWindowSizeChange);
+      };
     }, []);
 
-    return (width <= 768);
-}
+    return width <= 768;
+  };
 
-const dispatch = useDispatch()
-
+  const dispatch = useDispatch();
 
   const SubmitContact = (e) => {
-e.preventDefault()
-setisLoading(false)
+    e.preventDefault();
+    setisLoading(false);
     const data = {
       number: number,
       name: name,
       message: message,
     };
-dispatch(enquiryContactAction(data))
-    
+    dispatch(enquiryContactAction(data));
   };
 
   return (
@@ -93,15 +91,15 @@ dispatch(enquiryContactAction(data))
                     label="Enter Contact Details"
                     variant="outlined"
                     autoComplete="off"
-                    type="number"
+                    type="tel"
                     required
                     value={number}
-                    inputProps={{ maxLength: 11, minLength:10 }}
+                    inputProps={{ maxLength: 12, minLength: 10 }}
                     style={{
                       width: "85%",
                       marginLeft: "7%",
                       marginRight: "auto",
-                      float:'left'
+                      float: "left",
                     }}
                     onChange={(e) => {
                       setnumber(e.target.value);
@@ -117,8 +115,8 @@ dispatch(enquiryContactAction(data))
                     type="text"
                     required
                     value={message}
-                  style={{marginLeft:useCheckMobileScreen()?'7%':'3%'}}
-                    className='messageBox'
+                    style={{ marginLeft: useCheckMobileScreen() ? "7%" : "3%" }}
+                    className="messageBox"
                     multiline
                     onChange={(e) => {
                       setmessage(e.target.value);
@@ -142,7 +140,7 @@ dispatch(enquiryContactAction(data))
                 backgroundColor: "#002D62",
               }}
             >
-             {loading?'SENDING...':'SEND'} 
+              {loading ? "SENDING..." : "SEND"}
             </Button>
             <br />
           </form>

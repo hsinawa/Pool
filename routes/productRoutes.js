@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const ProductSchema = require("../models/products");
+var nodemailer = require("nodemailer");
 
 router.post("/addproduct", async (req, res) => {
   try {
@@ -74,6 +75,8 @@ router.post("/addreview", async (req, res) => {
   
   await  product.quotes.push(reviewmodel);
   await product.save();
+
+
   res.send({ message: "Enquiry Submitted Successfully" });
   }
   catch(err){

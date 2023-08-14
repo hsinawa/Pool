@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 const EnquireSchema = require("../models/contactModel");
+var nodemailer = require("nodemailer");
+
 
 router.post("/postEnq", async (req, res) => {
   try {
@@ -14,6 +16,8 @@ router.post("/postEnq", async (req, res) => {
     });
 
     await enq.save();
+
+
 
     res.send({ message: "Message Sent Successfully" });
   } catch (err) {

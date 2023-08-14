@@ -4,11 +4,8 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Grid from "@mui/material/Grid";
-
+import CallIcon from '@mui/icons-material/Call';
 import brochure from '../Static/brochure-wadbrosindia.pdf'
 
 const GridSection = () => {
@@ -25,9 +22,9 @@ const GridSection = () => {
     >
       <Box sx={{ flexGrow: 1, mx: "auto" }}>
         <Grid container spacing={2}>
-          <Grid item xs={10} md={6} sx={{ mx: "auto" }}>
+          <Grid item xs={12} md={12} sx={{ mx: "auto" }}>
             <Grid container spacing={2}>
-              <Grid item xs={6} md={6}>
+              <Grid item xs={4} md={4}>
                 <h3>Our Compant</h3>
 
                 <p>
@@ -73,7 +70,7 @@ const GridSection = () => {
                 </p>
               </Grid>
 
-              <Grid item xs={6} md={6}>
+              <Grid item xs={4} md={4}>
                 <h3>Our Products</h3>
                 <p>
                   <a
@@ -104,49 +101,32 @@ const GridSection = () => {
                 </p>
               </Grid>
 
+
+              <Grid item xs={4} md={4}>
+                <h3>Connect On</h3>
+                <p>
+                  <a
+                    href="mailto:varinder@wadbrosindia.com"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    
+                    <ContactMailIcon style={{fontSize:'30px', verticalAlign:'-10px'}} /> E-mail
+                  </a>
+                </p>
+                <p>
+                  <a
+                    href="tel:+919810970755"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                      <CallIcon style={{fontSize:'30px', verticalAlign:'-10px'}} /> Call
+                  </a>    
+                </p>
+            
+              </Grid>
     
             </Grid>
           </Grid>
-          <Grid item xs={10} md={6} sx={{ mx: "auto" }}>
-            <h3>Connect On</h3>
-            <Grid container spacing={2}>
-              <Grid item xs={2} md={2}>
-                <p></p>
-              </Grid>
-
-         
       
-         
-              <Grid item xs={3} md={3}>
-                <p title="E-Mail">
-                  <a
-                    href={`mailto:varinder@wadbrosindia.com`}
-                    target="_blank"
-                    style={{ color: "white", cursor: "pointer" }}
-                  >
-                   <ContactMailIcon
-                      style={{ verticalAlign: "-6px", fontSize: "35px" }}
-                    /> 
-                  </a>
-                </p>
-              </Grid>
-              <Grid item xs={3} md={3}>
-              <p title="E-Mail">
-                  <a
-                    href={`mailto:varinder@wadbrosindia.com`}
-                    target="_blank"
-                    style={{ color: "white", cursor: "pointer", textDecoration:"none", marginLeft:'-40%' }}
-                  >
-                  varinder@wadbrosindia.com
-                  </a>
-                </p>
-              </Grid>
-
-              <Grid item xs={2} md={2}>
-                <p></p>
-              </Grid>
-            </Grid>
-          </Grid>
         </Grid>
       </Box>
       <br />

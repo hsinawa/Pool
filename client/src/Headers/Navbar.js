@@ -42,10 +42,27 @@ function Navbar() {
 
   const handleOptionSelected = (event, value) => {
     if (value) {
-      
       window.location.href = `/productitem/${value._id}`;
     }
   };
+
+  const useCheckMobileScreen = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const handleWindowSizeChange = () => {
+            setWidth(window.innerWidth);
+    }
+
+    React.useEffect(() => {
+        window.addEventListener('resize', handleWindowSizeChange);
+        return () => {
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+
+    return (width <= 768);
+}
+
+var isMobile = useCheckMobileScreen()
 
   return (
     <header>
@@ -76,47 +93,35 @@ function Navbar() {
           </a>
         </h3>
       )}
-      <nav ref={navRef} id="nav-styles">
+      <nav ref={navRef} id="nav-styles" style={{float:'right', marginRight:'-33%'}} >
         <a href="/about">About Us</a>
         <a href="/products">Our Products</a>
         <a href="/contact">Contact Us</a>
 
- 
-        {/* <Autocomplete
+        <Autocomplete
           id="free-solo-demo"
           freeSolo
-          placeholder='Search...'
           options={products}
           getOptionLabel={(option) => option.name}
-          renderInput={(params) => <TextField {...params}  />}
           onChange={handleOptionSelected}
           renderOption={(props, option) => (
             <li {...props}>
-              <a href={`/productitem/${option._id}`} style={{textDecoration:'none'}} >{option.name}</a>
+              <a
+                href={`/productitem/${option._id}`}
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                {option.name}
+              </a>
             </li>
           )}
-        /> */}
-
-<Autocomplete
-      id="free-solo-demo"
-      freeSolo
-      options={products}
-      getOptionLabel={(option) => option.name}
-      onChange={handleOptionSelected}
-      renderOption={(props, option) => (
-        <li {...props}>
-          <a href={`/productitem/${option._id}`} style={{textDecoration:'none'}} >{option.name}</a>
-        </li>
-      )}
-      renderInput={(params) => (
-        <TextField
-          {...params}
-          style={{ width: '200px' }} // Increase width of TextField
-          placeholder="Search for products" // Add a placeholder
+          renderInput={(params) => (
+            <TextField
+              {...params}
+              style={{ width: "200px" }} // Increase width of TextField
+              placeholder="Search for products" // Add a placeholder
+            />
+          )}
         />
-      )}
-    />
-
 
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />

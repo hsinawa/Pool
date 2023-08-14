@@ -294,41 +294,9 @@ const AboutUs = () => {
               rowSpacing={1}
               columnSpacing={{ xs: 1, sm: 2, md: 3 }}
             >
-              <Grid item xs={6} md={6}>
-                <p
-                  style={{
-                    fontWeight: "bold",
-                    color: "#989898",
-                    textAlign: "left",
-                    marginLeft: "3%",
-                  }}
-                >
-                  {textData.AboutPage.CompanyFactSheet.statuory.import[0]}
-                </p>
-              </Grid>
-              <Grid item xs={6} md={6}>
-                <p style={{ color: "#202020", textAlign: "start" }}>
-                  {textData.AboutPage.CompanyFactSheet.statuory.import[1]}
-                </p>
-              </Grid>
+        
 
-              <Grid item xs={6} md={6}>
-                <p
-                  style={{
-                    fontWeight: "bold",
-                    color: "#989898",
-                    textAlign: "left",
-                    marginLeft: "3%",
-                  }}
-                >
-                  {textData.AboutPage.CompanyFactSheet.statuory.Banker[0]}
-                </p>
-              </Grid>
-              <Grid item xs={6} md={6}>
-                <p style={{ color: "#202020", textAlign: "start" }}>
-                  {textData.AboutPage.CompanyFactSheet.statuory.Banker[1]}
-                </p>
-              </Grid>
+  
 
               <Grid item xs={6} md={6}>
                 <p
@@ -351,73 +319,7 @@ const AboutUs = () => {
           </Box>
         </p>
 
-        <p className="companybox">
-          <Box sx={{ width: "100%", textAlign: "center" }}>
-            <br />
-            <h4
-              style={{
-                fontWeight: "bold",
-                marginLeft: "10px",
-              }}
-            >
-              {textData.AboutPage.CompanyFactSheet.packaging.name}
-            </h4>
-            <hr />
-            <Grid
-              container
-              rowSpacing={1}
-              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-            >
-              <Grid item xs={6} md={6}>
-                <p
-                  style={{
-                    fontWeight: "bold",
-                    color: "#989898",
-                    textAlign: "left",
-                    marginLeft: "3%",
-                  }}
-                >
-                  {textData.AboutPage.CompanyFactSheet.packaging.payments[0]}
-                </p>
-              </Grid>
-              <Grid item xs={6} md={6}>
-                <li style={{ color: "#202020", textAlign: "start" }}>
-                  {textData.AboutPage.CompanyFactSheet.packaging.payments[1]}
-                </li>
-                <li style={{ color: "#202020", textAlign: "start" }}>
-                  {textData.AboutPage.CompanyFactSheet.packaging.payments[2]}
-                </li>
-                <li style={{ color: "#202020", textAlign: "start" }}>
-                  {textData.AboutPage.CompanyFactSheet.packaging.payments[3]}
-                </li>
-                <li style={{ color: "#202020", textAlign: "start" }}>
-                  {textData.AboutPage.CompanyFactSheet.packaging.payments[4]}
-                </li>
-                <li style={{ color: "#202020", textAlign: "start" }}>
-                  {textData.AboutPage.CompanyFactSheet.packaging.payments[5]}
-                </li>
-              </Grid>
-
-              <Grid item xs={6} md={6}>
-                <p
-                  style={{
-                    fontWeight: "bold",
-                    color: "#989898",
-                    textAlign: "left",
-                    marginLeft: "3%",
-                  }}
-                >
-                  {textData.AboutPage.CompanyFactSheet.packaging.shipment[0]}
-                </p>
-              </Grid>
-              <Grid item xs={6} md={6}>
-                <p style={{ color: "#202020", textAlign: "start" }}>
-                  {textData.AboutPage.CompanyFactSheet.packaging.shipment[1]}
-                </p>
-              </Grid>
-            </Grid>
-          </Box>
-        </p>
+  
       </section>
       <br />
 

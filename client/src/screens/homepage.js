@@ -12,7 +12,8 @@ import CompSearchByTypeonent from "./SearchByType";
 import WhyUS from "./WhyUS";
 import ContactUs from "./contactUs";
 import AllProducts from "./productsAll";
-
+import poolback from '../Static/poolback.jpeg'
+import poolback2 from '../Static/poolback2.jpeg'
 
 const Homescreen = () => {
 
@@ -23,7 +24,7 @@ const Homescreen = () => {
       <Carousel.Item >
         <img
           className="d-block w-100"
-          src="https://w0.peakpx.com/wallpaper/822/161/HD-wallpaper-night-resort-thailand-villa-phuket-pool.jpg"
+          src={poolback}
           alt="Slide 1"
          id='carousel-image'
         />
@@ -31,7 +32,7 @@ const Homescreen = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://e0.pxfuel.com/wallpapers/161/574/desktop-wallpaper-minimalist-house-for-ultra-house-mansion.jpg"
+          src={poolback2}
           alt="Slide 2"
           id='carousel-image'
         />
@@ -80,6 +81,7 @@ const Homescreen = () => {
                 {textData.AboutSection[1]}
               </p>
 
+<a href='/about' style = {{textDecoration:'none', color:'white'}} >
               <Button
                 variant="contained"
                 sx={{
@@ -90,6 +92,7 @@ const Homescreen = () => {
               >
                 {textData.knowMore}
               </Button>
+              </a>
             </p>
           </Grid>
         </Grid>
